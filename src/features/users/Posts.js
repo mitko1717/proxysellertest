@@ -13,6 +13,7 @@ const Posts = () => {
 
   return (
     <div className="container">
+      {posts.length === 0 && <h1>Data is Loading</h1>}
       {posts.map((post) => {
         return <div key={post.id}>{post.title}</div>;
       })}

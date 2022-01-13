@@ -22,7 +22,7 @@ function App() {
       {isOpen && <Modal open={isOpen} onClose={() => setIsOpen(false)} />}
 
       <Router>
-        <NavLink className="link" to="/">
+        <NavLink className="link" to="">
           USERS
         </NavLink>
         <NavLink className="link" to="/posts">
@@ -30,7 +30,7 @@ function App() {
         </NavLink>
 
         <Routes>
-          <Route path="/" element={<Users />}></Route>
+          <Route path="" element={<Users />}></Route>
           <Route path="/posts" element={<Posts />}></Route>
         </Routes>
       </Router>

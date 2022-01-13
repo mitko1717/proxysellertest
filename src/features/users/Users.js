@@ -13,6 +13,7 @@ const Users = () => {
 
   return (
     <div className="container">
+      {users.length === 0 && <h1>Data is Loading</h1>}
       {users.map((user) => {
         return <div key={user.id}>{user.name}</div>;
       })}

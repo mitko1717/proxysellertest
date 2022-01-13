@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAlbums } from "./slice";
 import ReactDom from "react-dom";
@@ -17,6 +17,7 @@ const Modal = ({ open, children, onClose }) => {
     <>
       <div style={OVERLAY_STYLES} onClick={onClose} />
       <div style={MODAL_STYLES}>
+        {albums.length === 0 && <h1>Data is Loading</h1>}
         <div>
           {albums.map((album) => {
             return <div key={album.id}>{album.title}</div>;
