@@ -22,16 +22,16 @@ function App() {
       {isOpen && <Modal open={isOpen} onClose={() => setIsOpen(false)} />}
 
       <Router>
-        <NavLink className="link" to="">
+        <NavLink className="link" exact to="proxysellertest/">
           USERS
         </NavLink>
-        <NavLink className="link" to="/posts">
+        <NavLink className="link" to="proxysellertest/posts">
           POSTS
         </NavLink>
 
         <Routes>
-          <Route path="" element={<Users />}></Route>
-          <Route path="/posts" element={<Posts />}></Route>
+          <Route exact path="proxysellertest/" element={<Users />}></Route>
+          <Route path="proxysellertest/posts" element={<Posts />}></Route>
         </Routes>
       </Router>
     </div>
